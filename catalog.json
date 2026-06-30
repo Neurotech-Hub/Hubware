@@ -2,9 +2,17 @@
   {
     "id": "beam-v3",
     "name": "Hubware BEAM v3",
-    "version": "3.0.0",
+    "version": "0.2.1",
     "description": "Firmware for Hubware BEAM devices with ESP32-S3.",
     "manifest": "firmware/beam-v3/manifest.json",
-    "badge": "Recommended"
+    "badge": "New"
+  },
+  {
+    "id": "ble-node",
+    "name": "HublinkBLENode",
+    "version": "0.1.0",
+    "description": "Firmware for HublinkBLENode devices with ESP32-S3.",
+    "manifest": "firmware/ble-node/manifest.json",
+    "badge": "New"
   }
 ]

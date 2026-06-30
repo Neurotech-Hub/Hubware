@@ -33,6 +33,22 @@ CHIP_TO_FAMILY = {
 }
 
 
+def resolve_esptool(command_line: str) -> list[str]:
+    """Return argv prefix to invoke esptool (Arduino binary, PATH, or python -m)."""
+    tokens = shlex.split(command_line.strip())
+    if not tokens:
+        raise ValueError("esptool_command is empty")
+
+    bundled = Path(tokens[0]).expanduser()
+    if bundled.is_file():
+        return [str(bundled)]
+
+    if shutil.which("esptool"):
+        return ["esptool"]
+
+    return [sys.executable, "-m", "esptool"]
+
+
 def parse_esptool_command(line: str) -> tuple[str, list[tuple[int, str]]]:
     line = line.strip()
     if not line:
@@ -121,15 +137,14 @@ def copy_parts(
 
 
 def merge_firmware(
+    esptool_command_line: str,
     chip: str,
     parts: list[tuple[int, Path]],
     output: Path,
     flash_size: str,
 ) -> None:
     cmd = [
-        sys.executable,
-        "-m",
-        "esptool",
+        *resolve_esptool(esptool_command_line),
         "--chip",
         chip,
         "merge_bin",
@@ -218,6 +233,7 @@ def package_firmware(config_path: Path) -> None:
 
     merged_path = dest_dir / "firmware.bin"
     merge_firmware(
+        config["esptool_command"],
         chip,
         copied_parts,
         merged_path,
