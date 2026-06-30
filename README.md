@@ -2,9 +2,9 @@
 
 Browser-based firmware installer for Hubware ESP32-S3 devices. Customers pick the firmware you specify, connect their board over USB, and flash from Chrome or Edge — no Arduino IDE required on their end.
 
-**Live site:** `https://<github-org>.github.io/<repo-name>/`
+**Repository:** [github.com/Neurotech-Hub/Hubware](https://github.com/Neurotech-Hub/Hubware)
 
-Replace `<github-org>` and `<repo-name>` after you push this repo and enable GitHub Pages (see below).
+**Live site:** [neurotech-hub.github.io/Hubware](https://neurotech-hub.github.io/Hubware/)
 
 ## How it works
 
@@ -21,7 +21,7 @@ Powered by [ESP Web Tools](https://esphome.github.io/esp-web-tools/) and the Web
 2. Go to **Settings → Pages**.
 3. Under **Build and deployment → Source**, choose **Deploy from a branch**.
 4. Set branch to **main** and folder to **/ (root)**.
-5. Save. The site will be available at `https://<org>.github.io/<repo>/` within a few minutes.
+5. Save. The site will be available at [neurotech-hub.github.io/Hubware](https://neurotech-hub.github.io/Hubware/) within a few minutes.
 
 Optional: add a custom domain (e.g. `flash.hubware.com`) under **Settings → Pages → Custom domain**.
 
