@@ -187,6 +187,54 @@ body {
   letter-spacing: 0.04em;
 }
 
+.section-prerequisites {
+  margin-bottom: 2.5rem;
+  padding: 0.15rem 0 0.15rem 1rem;
+  border-left: 2px solid rgba(59, 130, 246, 0.35);
+}
+
+.prerequisites-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--hubware-muted);
+}
+
+.prerequisites-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.prerequisites-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: rgba(139, 156, 179, 0.95);
+}
+
+.prerequisites-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.55);
+}
+
+.prerequisites-list strong {
+  color: var(--hubware-text);
+  font-weight: 500;
+}
+
 .notice {
   background: var(--hubware-surface);
   border: 1px solid var(--hubware-border);
