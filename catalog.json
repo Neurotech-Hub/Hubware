@@ -1,0 +1,10 @@
+[
+  {
+    "id": "beam-v3",
+    "name": "Hubware BEAM v3",
+    "version": "3.0.0",
+    "description": "Firmware for Hubware BEAM devices with ESP32-S3.",
+    "manifest": "firmware/beam-v3/manifest.json",
+    "badge": "Recommended"
+  }
+]

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hubware Firmware Installer</title>
+    <meta
+      name="description"
+      content="Install Hubware firmware on your ESP32-S3 device directly from your browser."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"
+    ></script>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1 class="logo">Hubware</h1>
+        <p class="tagline">ESP32-S3 firmware installer</p>
+      </header>
+
+      <section class="section">
+        <h2>Before you start</h2>
+        <div class="notice">
+          <ul>
+            <li>Use <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong> on a computer (not a phone or tablet).</li>
+            <li>Connect your ESP32-S3 board with a USB data cable.</li>
+            <li>Close the Arduino IDE serial monitor or any other app using the USB port.</li>
+            <li>Select the firmware we told you to use from the list below.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Available firmware</h2>
+        <div id="catalog">
+          <p class="catalog-empty">Loading firmware catalog…</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Troubleshooting</h2>
+        <div class="notice">
+          <ul>
+            <li><strong>No device found:</strong> Try a different USB cable or port. Some cables are charge-only.</li>
+            <li><strong>Permission denied:</strong> Close other programs that may be using the serial port, then retry.</li>
+            <li><strong>Wrong port selected:</strong> Unplug the board, click Install again, and pick the port that appears when you plug it in.</li>
+            <li><strong>Device not entering bootloader:</strong> Hold the <strong>BOOT</strong> button, tap <strong>RESET</strong>, release <strong>BOOT</strong>, then retry.</li>
+            <li><strong>Flash fails or device won't boot:</strong> Confirm you selected the correct firmware for your board.</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <p>Hubware — browser-based firmware updates powered by ESP Web Tools</p>
+      </footer>
+    </div>
+
+    <script src="js/catalog.js"></script>
+  </body>
+</html>

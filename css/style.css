@@ -1,0 +1,184 @@
+:root {
+  --hubware-bg: #0f1419;
+  --hubware-surface: #1a2332;
+  --hubware-border: #2d3a4d;
+  --hubware-text: #e8edf4;
+  --hubware-muted: #8b9cb3;
+  --hubware-accent: #3b82f6;
+  --hubware-accent-hover: #2563eb;
+  --hubware-accent-text: #ffffff;
+  --hubware-badge: #1e3a5f;
+  --hubware-badge-text: #93c5fd;
+  --hubware-radius: 12px;
+  --hubware-font: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--hubware-font);
+  background: var(--hubware-bg);
+  color: var(--hubware-text);
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.25rem;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--hubware-muted);
+  font-size: 1.05rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: var(--hubware-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.notice {
+  background: var(--hubware-surface);
+  border: 1px solid var(--hubware-border);
+  border-radius: var(--hubware-radius);
+  padding: 1rem 1.25rem;
+}
+
+.notice ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.notice li {
+  margin-bottom: 0.35rem;
+}
+
+.notice li:last-child {
+  margin-bottom: 0;
+}
+
+#catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.firmware-card {
+  background: var(--hubware-surface);
+  border: 1px solid var(--hubware-border);
+  border-radius: var(--hubware-radius);
+  padding: 1.25rem 1.5rem;
+}
+
+.firmware-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.firmware-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.firmware-version {
+  color: var(--hubware-muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.badge {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--hubware-badge);
+  color: var(--hubware-badge-text);
+}
+
+.firmware-description {
+  margin: 0 0 1.25rem;
+  color: var(--hubware-muted);
+  font-size: 0.95rem;
+}
+
+.install-btn {
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  background: var(--hubware-accent);
+  color: var(--hubware-accent-text);
+  transition: background 0.15s ease;
+}
+
+.install-btn:hover {
+  background: var(--hubware-accent-hover);
+}
+
+esp-web-install-button[slot="unsupported"],
+esp-web-install-button .unsupported-msg {
+  color: #f87171;
+  font-size: 0.9rem;
+}
+
+.catalog-error {
+  color: #f87171;
+  padding: 1rem;
+  background: var(--hubware-surface);
+  border-radius: var(--hubware-radius);
+}
+
+.catalog-empty {
+  color: var(--hubware-muted);
+  text-align: center;
+  padding: 2rem;
+  background: var(--hubware-surface);
+  border-radius: var(--hubware-radius);
+  border: 1px dashed var(--hubware-border);
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--hubware-muted);
+  font-size: 0.85rem;
+}

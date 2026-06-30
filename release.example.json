@@ -1,0 +1,9 @@
+{
+  "slug": "beam-v3",
+  "name": "Hubware BEAM v3",
+  "version": "3.0.0",
+  "description": "Firmware for Hubware BEAM devices with ESP32-S3.",
+  "badge": "Recommended",
+  "flash_size": "8MB",
+  "esptool_command": "\"/Users/gaidica/Library/Arduino15/packages/esp32/tools/esptool_py/5.0.dev1/esptool\" --chip esp32s3 --port \"/dev/cu.usbmodem111301\" --baud 921600 --before default-reset --after hard-reset write-flash -z --flash-mode keep --flash-freq keep --flash-size keep 0x0 \"/Users/gaidica/Library/Caches/arduino/sketches/B437619AE47045AB4147D2D632BCF47E/BEAMv3.ino.bootloader.bin\" 0x8000 \"/Users/gaidica/Library/Caches/arduino/sketches/B437619AE47045AB4147D2D632BCF47E/BEAMv3.ino.partitions.bin\" 0xe000 \"/Users/gaidica/Library/Arduino15/packages/esp32/hardware/esp32/3.2.1/tools/partitions/boot_app0.bin\" 0x10000 \"/Users/gaidica/Library/Caches/arduino/sketches/B437619AE47045AB4147D2D632BCF47E/BEAMv3.ino.bin\""
+}
