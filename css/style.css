@@ -34,9 +34,131 @@ body {
   padding: 2rem 1.25rem 4rem;
 }
 
-header {
+.site-header {
+  position: relative;
   text-align: center;
   margin-bottom: 2.5rem;
+  padding-top: 0.25rem;
+}
+
+.help-trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--hubware-border);
+  border-radius: 999px;
+  background: var(--hubware-surface);
+  color: var(--hubware-muted);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.help-trigger:hover,
+.help-trigger:focus-visible {
+  color: var(--hubware-text);
+  border-color: var(--hubware-accent);
+  background: var(--hubware-badge);
+  outline: none;
+}
+
+.help-trigger-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.help-popover {
+  position: fixed;
+  inset: auto;
+  top: 1rem;
+  right: 1.25rem;
+  left: auto;
+  width: min(420px, calc(100vw - 2.5rem));
+  max-height: calc(100vh - 2rem);
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--hubware-border);
+  border-radius: var(--hubware-radius);
+  background: var(--hubware-surface);
+  color: var(--hubware-text);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+
+.help-popover::backdrop {
+  background: rgba(15, 20, 25, 0.55);
+}
+
+.help-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--hubware-border);
+}
+
+.help-popover-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--hubware-muted);
+}
+
+.help-popover-close {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--hubware-muted);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.help-popover-close:hover,
+.help-popover-close:focus-visible {
+  color: var(--hubware-text);
+  background: var(--hubware-border);
+  outline: none;
+}
+
+.help-popover-list {
+  margin: 0;
+  padding: 1rem 1.25rem 1.25rem 2.25rem;
+}
+
+.help-popover-list li {
+  margin-bottom: 0.65rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.help-popover-list li:last-child {
+  margin-bottom: 0;
+}
+
+.help-popover-list code {
+  font-size: 0.85em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--hubware-bg);
+  color: var(--hubware-badge-text);
 }
 
 .logo {
