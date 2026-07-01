@@ -22,6 +22,8 @@
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--hubware-font);
   background: var(--hubware-bg);
   color: var(--hubware-text);
@@ -29,9 +31,11 @@ body {
 }
 
 .page {
+  flex: 1;
   max-width: 720px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem 1.25rem 4rem;
+  padding: 2rem 1.25rem 3rem;
 }
 
 .site-header {
@@ -187,6 +191,27 @@ body {
   letter-spacing: 0.04em;
 }
 
+.firmware-filter {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--hubware-border);
+  border-radius: 8px;
+  background: var(--hubware-surface);
+  color: var(--hubware-text);
+  font-family: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.firmware-filter:hover,
+.firmware-filter:focus-visible {
+  border-color: var(--hubware-accent);
+  outline: none;
+}
+
 .section-prerequisites {
   margin-bottom: 2.5rem;
   padding: 0.15rem 0 0.15rem 1rem;
@@ -288,16 +313,27 @@ body {
   font-weight: 400;
 }
 
-.badge {
+.copy-link-btn {
   flex-shrink: 0;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  padding: 0.2rem 0.55rem;
+  appearance: none;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--hubware-border);
   border-radius: 999px;
+  background: transparent;
+  color: var(--hubware-muted);
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.copy-link-btn:hover,
+.copy-link-btn:focus-visible {
+  color: var(--hubware-text);
+  border-color: var(--hubware-accent);
   background: var(--hubware-badge);
-  color: var(--hubware-badge-text);
+  outline: none;
 }
 
 .firmware-description {
@@ -346,9 +382,32 @@ esp-web-install-button .unsupported-msg {
   border: 1px dashed var(--hubware-border);
 }
 
-footer {
-  margin-top: 3rem;
+.site-footer {
+  margin-top: auto;
+  padding: 1rem 1.25rem 1.25rem;
   text-align: center;
   color: var(--hubware-muted);
   font-size: 0.85rem;
+  background: var(--hubware-surface);
+  border-top: 1px solid var(--hubware-border);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer p + p {
+  margin-top: 0.4rem;
+}
+
+.site-footer a {
+  color: var(--hubware-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--hubware-accent);
+  outline: none;
 }

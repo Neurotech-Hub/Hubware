@@ -35,7 +35,6 @@ Edit `release.json`:
   "name": "Hubware BEAM v3",
   "version": "3.0.0",
   "description": "Firmware for Hubware BEAM devices with ESP32-S3.",
-  "badge": "Recommended",
   "flash_size": "8MB",
   "esptool_command": "PASTE THE FULL ESPTOOL LINE HERE"
 }
@@ -47,7 +46,6 @@ Edit `release.json`:
 | `name` | Customer-facing name on the install page |
 | `version` | Release version string |
 | `description` | When customers should pick this firmware |
-| `badge` | Optional label (e.g. `Recommended`, `Legacy`) |
 | `flash_size` | Board flash size (usually `8MB` for ESP32-S3) |
 | `esptool_command` | The full line copied from Arduino upload output |
 

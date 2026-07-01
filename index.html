@@ -71,15 +71,21 @@
 
       <section class="section">
         <h2>Available firmware</h2>
+        <select id="firmware-filter" class="firmware-filter" aria-label="Filter firmware">
+          <option value="">All Firmware</option>
+        </select>
         <div id="catalog">
           <p class="catalog-empty">Loading firmware catalog…</p>
         </div>
       </section>
-
-      <footer>
-        <p>&copy; 2026 Neurotech Hub at Washington University</p>
-      </footer>
     </div>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Neurotech Hub at Washington University</p>
+      <p class="site-footer-links">
+        <a href="https://github.com/Neurotech-Hub/Hubware" target="_blank" rel="noopener noreferrer">View the repo</a>
+      </p>
+    </footer>
 
     <script src="js/catalog.js"></script>
   </body>

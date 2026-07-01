@@ -186,7 +186,6 @@ def update_catalog(
     name: str,
     version: str,
     description: str,
-    badge: str | None,
 ) -> None:
     if catalog_path.exists():
         catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
@@ -200,8 +199,6 @@ def update_catalog(
         "description": description,
         "manifest": f"firmware/{slug}/manifest.json",
     }
-    if badge:
-        entry["badge"] = badge
 
     updated = False
     for i, existing in enumerate(catalog):
@@ -247,7 +244,6 @@ def package_firmware(config_path: Path) -> None:
         config["name"],
         config["version"],
         config["description"],
-        config.get("badge"),
     )
 
     size = merged_path.stat().st_size
